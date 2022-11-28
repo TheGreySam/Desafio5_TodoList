@@ -22,7 +22,7 @@
         <h5>Nueva tarea</h5>
         <div class="input-control d-flex">
             <input type="text" class="form-control r-5" placeholder="Ingrese una nueva tarea" id="nuevaActividad">
-            <button class="btn btn-success" onclick="agregarNuevaActividad">Agregar</button>
+            <button class="btn btn-success" id="agregarNuevaActividad">Agregar</button>
         </div>
         <div class="py-3 d-flex w-100">
             <ul class="list-group w-25">
@@ -33,7 +33,7 @@
                     Realizadas: 0
                 </li>
             </ul>
-            <ul class="list-group w-75">
+            <ul class="list-group w-75" id="listaActividades">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span class="badge bg-primary badge-pill">14</span>
                     Hacer mercado
