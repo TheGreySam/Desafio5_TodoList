@@ -10,8 +10,14 @@ let actividades = [
     { id: 24, tarea: "Sacar a pasear a Toby", status: false }
 ];
 let totalActividades = actividades.length;
+let filtroActividades = actividades.status;
+
+function filtrarLista(actividad) {
+    return actividad = false
+}
 
 console.log(totalActividades);
+console.log(filtroActividades);
 console.log(`Total: ${totalActividades}`);
 
 
@@ -44,7 +50,7 @@ const actualizarLista = (totalActividades) => {
     Total: ${totalActividades}
 </li>
 <li class="list-group-item">
-    Realizadas: 
+    Realizadas: ${filtroActividades}
 </li>
 `;
     document.getElementById("listaCantidad").innerHTML = listaCant;
