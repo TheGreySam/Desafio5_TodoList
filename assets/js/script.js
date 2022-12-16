@@ -5,43 +5,43 @@ const quantity = document.getElementById("#quantity")
 
 
 let actividades = [
-    {tarea: "Hacer mercado", status: true},
-    {tarea: "Hacer mercado4", status: true},
-    {tarea: "Hacer mercado5", status: true}
+    {id: 16, tarea: "Hacer mercado"},
+    {id: 60, tarea: "Estudiar para la prueba"},
+    {id: 24, tarea: "Sacar a pasear a Toby"}
 ];
 let totalActividades = actividades.length;
     
 console.log(totalActividades);
 console.log(`Total: ${totalActividades}`);
 
-let lista = ``
-for (let actividad of actividades) {
-    lista += 
-    `<ul class="list-group w-25">
+let listaCant =
+`
 <li class="list-group-item" id="quantity">
     Total: ${totalActividades}
 </li>
 <li class="list-group-item">
     Realizadas: 
 </li>
-</ul>
-<ul class="list-group w-75" id="listaActividades">
-<li class="list-group-item d-flex justify-content-between align-items-center">
-    <span class="badge bg-primary badge-pill">14</span>
+`
+let html = listaCant;
+document.getElementById("listaCantidad").innerHTML = html
+
+let lista = ``
+for (let actividad of actividades) {
+    lista += 
+`<li class="list-group-item d-flex justify-content-between align-items-center">
+    <span class="badge bg-primary badge-pill">${actividad.id}</span>
     ${actividad.tarea}
     <div>
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <input type="checkbox" class="form-check-input" id="status">
         <button type="button" class="btn-close ms-3" aria-label="Close"></button>
     </div>
     
   
-</li>
-
-</ul>`
-}
-;
-let html = lista;
-document.getElementById("lista").innerHTML = html;
+</li>`
+};
+let htmlb = lista;
+document.getElementById("lista").innerHTML = htmlb;
 
 
 // agregarNuevaActividad.addEventListener("click", () => {
@@ -60,6 +60,9 @@ document.getElementById("lista").innerHTML = html;
 function nuevaActividad() {
     let agregarNuevaActividad = document.getElementById("agregarNuevaActividad").value
     console.log(agregarNuevaActividad)
+    let newId = Math.floor(Math.random() * 100);
+    let newObject = {id: newId, tarea: agregarNuevaActividad};
+    actividades.push(newObject);
     // agregarNuevaActividad.array.forEach(element => {
     //     actividades.push(element);
         
