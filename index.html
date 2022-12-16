@@ -21,31 +21,11 @@
         <hr>
         <h5>Nueva tarea</h5>
         <div class="input-control d-flex">
-            <input type="text" class="form-control r-5" placeholder="Ingrese una nueva tarea" id="nuevaActividad">
-            <button class="btn btn-success" id="agregarNuevaActividad">Agregar</button>
+            <input type="text" class="form-control r-5" placeholder="Ingrese una nueva tarea" id="agregarNuevaActividad">
+            <button class="btn btn-success" id="nuevaActividad" onclick="nuevaActividad()">Agregar</button>
         </div>
-        <div class="py-3 d-flex w-100">
-            <ul class="list-group w-25">
-                <li class="list-group-item">
-                    Total: 0
-                </li>
-                <li class="list-group-item">
-                    Realizadas: 0
-                </li>
-            </ul>
-            <ul class="list-group w-75" id="listaActividades">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <span class="badge bg-primary badge-pill">14</span>
-                    Hacer mercado
-                    <div>
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <button type="button" class="btn-close ms-3" aria-label="Close"></button>
-                    </div>
-                    
-                  
-                </li>
-               
-              </ul>
+        <div class="py-3  w-100" id="lista">
+            
         </div>
         
     </div>
